@@ -7,12 +7,15 @@ public class Launcher {
     }
 
     static int sumOfNumbers(int number) {
-        if (number < 10) {
-            return number;
-        } else {
-            int divide = number % 10;
-            return divide + sumOfNumbers(number/10);
+        int sum = 0;
+        
+        while (number > 0) {
+             int divide = number % 10;
+             sum += divide;
+             number = number / 10;
         }
+        
+        return sum;
     }
 
 }
